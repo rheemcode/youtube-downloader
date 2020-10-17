@@ -17,7 +17,6 @@ class Youtube(object):
         self.window.resizable(False, False)
         self.window.configure(padx=30, pady=20)
         self.textvariables()
-        self.icon()
         self.addInputWidgets()
         self.addButton()
         self.table()
@@ -78,9 +77,9 @@ class Youtube(object):
     def icon(self):
         self.frame = tk.LabelFrame(self.window, highlightthickness=0, borderwidth=0)
         self.frame.grid(row=2, column=0, columnspan=2, sticky=tk.W, pady=(10, 0))
-        self.fileIcon = tk.PhotoImage(
-            file="C:/Users/Dell/Desktop/youtube gui/icons8-folder-48.png", width=37, height=35)
-        Label(self.frame, image=self.fileIcon).grid(column=0, row=0, sticky=tk.W, columnspan=1)
+        #self.fileIcon = tk.PhotoImage(
+         #   file="C:/Users/Dell/Desktop/youtube gui/icons8-folder-48.png", width=37, height=35)
+        #Label(self.frame, image=self.fileIcon).grid(column=0, row=0, sticky=tk.W, columnspan=1)
 
     def addButton(self):
         self.addfiles = Button(self.frame, text="add", command=self.getstrings)
